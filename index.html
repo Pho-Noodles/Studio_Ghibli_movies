@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Ghibli Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="landing-page">
+        <nav>
+            <figure>
+                <img class="logo" src="./assets/Totoro.jpg" alt="Logo">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    ">Home</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    ">Find your movie</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#" class="
+                    nav__link--anchor 
+                    link__hover-effect 
+                    ">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <header>
+            <div class="header__container">
+                <h1 class="title">Studio Ghibli movie archives</h1>
+                <h2 class="header">Search through and find your Studio Ghibli movie.</h2>
+                <div class="input__wrapper">
+                    <input type="text" id="search-input" placeholder="Search by movie title...">
+                    <button class="search__button click" id="search-button">
+                        <a href="#">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </button>
+                </div>
+                <figure class="header__img--container">
+                    <img class="header__img" src="./assets/coloring-studio-ghibli-for-chloe.jpg" alt="header image">
+                </figure>
+                <div id="movie-list" class="movie-list">
+                    <div class="movie">
+                        <div class="movie__title">
+                            Movie Title
+                        </div>
+                        <div class="movie__director">
+                            Directed by: 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+</body>
+<script src="app.js"></script>
+</html>
