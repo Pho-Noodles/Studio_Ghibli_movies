@@ -11,7 +11,7 @@
     <section id="landing-page">
         <nav>
             <figure>
-                <img class="logo" src="./assets/Totoro.jpg" alt="Logo">
+                <img class="logo" src="./assets/Tot.jpg" alt="Logo">
             </figure>
             <ul class="nav__link--list">
                 <li class="nav__link">
@@ -45,6 +45,21 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </a>
                     </button>
+                    <div class="filter__container">
+                        <button class="filter" id="filter-button">
+                            <a href="#">
+                                <i class="fa-solid fa-sliders"></i>
+                            </a>
+                        </button>
+                        <ul class="filter__drop-down accordian" id="filter-menu">
+                            <li class="filter__option">
+                                Filter by Date: <input type="checkbox" id="filter-date" value="release_date">
+                            </li>
+                            <li class="filter__option">
+                                Filter by Time: <input type="checkbox" id="filter-time" value="running_time">
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <figure class="header__img--container">
                     <img class="header__img" src="./assets/coloring-studio-ghibli-for-chloe.jpg" alt="header image">
@@ -53,14 +68,19 @@
                     <div class="movie">
                         <div class="movie__title">
                             Movie Title
+                            <br>
+                            <span class="movie__director">Directed By: </span>
+                            <br>
+                            <span class="movie__date">Release Date: </span>
+                            <br>
+                            <span class="movie__run-time">Run Time: min</span>
                         </div>
-                        <div class="movie__director">
-                            Directed by: 
-                        </div>
+                        <img src="" alt="poster" class="movie__img">
                     </div>
                 </div>
             </div>
         </header>
+        
     </section>
 </body>
 <script src="app.js"></script>

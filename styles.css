@@ -90,7 +90,7 @@ nav {
     font-weight: 700;
 }
 
-input {
+#search-input {
     background-color: #FFF;
     border-radius: 20px;
     border: 1px solid #242424;
@@ -165,6 +165,18 @@ header {
     width: 275px;
 }
 
+.filter {
+    border: none;
+    background-color: #FFF;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.fa-sliders {
+    font-size: 25px;
+    color: #242424;
+}
+
 /* 
 
     SEARCH RESULTS
@@ -172,23 +184,57 @@ header {
 */
 
 .movie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #242424;
-    background-color: #FFF;
+    background-color: #242424;
     margin: 20px;
     border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 300ms ease;
+}
+
+.movie:hover {
+    transform: scale(1.025);
 }
 
 .movie__title {
+    color: #FFF;
     font-size: 24px;
     font-weight: bold;
-    border-bottom: 1px solid #242424;
-    text-align: center;
-    padding: 8px 0;
+    text-align: left;
+    padding: 8px 10px;
 }
 
 .movie__director {
-    text-align: center;
+    font-size: 16px;
+    text-align: left;
     padding: 8px 0;
+    font-weight: 100;
+}
+
+.movie__date {
+    font-size: 16px;
+    text-align: left;
+    padding: 8px 0;
+    font-weight: 100;
+}
+
+.movie__run-time {
+    font-size: 16px;
+    text-align: left;
+    padding: 8px 0;
+    font-weight: 100;
+}
+
+.movie__img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 /* .movie-list {
@@ -202,6 +248,45 @@ header {
     overflow: hidden;
 } */
 
+/* 
+
+    DROP-DOWN
+
+*/
+
+.filter__container {
+    position: relative;
+}
+
+.filter__drop-down {
+    position: absolute;
+    margin-top: 25px;
+    padding: 16px;
+    width: max-content;
+    max-width: calc(100vw - 20px);
+    max-width: 50ch;
+    background-color: #242424;
+    border-radius: 10px;
+    display: none;
+}
+
+.filter__drop-down.active {
+    display: block;
+}
+
+.filter__option {
+    color: #FFF;
+    padding: 5px 0px;
+}
+
+@media (max-width: 1050px) {
+    .filter__drop-down {
+        left: auto;
+        right: 0;
+    }
+}
+
+
 @media (max-width: 768px) {
     .title {
         font-size: 48px;
@@ -213,6 +298,14 @@ header {
 
     .movie__title {
         font-size: 20px;
+    }
+
+    .movie__img {
+        width: 50%;
+    }
+
+    .filter__option {
+        font-size: 12px;
     }
 }
 
@@ -231,5 +324,9 @@ header {
     
     .movie__director {
         font-size: 14px;
+    }
+
+    .movie__img {
+        width: 50%;
     }
 }
