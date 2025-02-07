@@ -36,7 +36,7 @@ function filterMovies() {
 
   if (checkedDate) {
     filteredMovies = filteredMovies.sort(
-      (a, b) => a.release_date - date.localeCompare(b.release_date)
+      (a, b) => a.release_date.localeCompare(b.release_date)
     );
   }
 
